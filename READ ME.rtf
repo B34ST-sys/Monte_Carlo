@@ -1,38 +1,38 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww17080\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+Instructions for how to run the Monte Carlo Simulation program on Mac Terminal
 
-\f0\fs24 \cf0 Instructions for how to run the Monte Carlo Simulation program on Mac Terminal\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\
-Step 1: Open Mac Terminal and Create a virtual environment with the command: \
-	\
-	source activate/bin/venv\
-\
-Step 2: Install the following inside the virtual environment: \
-	1. mpi4py\
-	2. MPICH\
-	3. python3 \
-	4. matplotlib \
-\
-Step 3: Place Monte Carlo program into source files whilst in virtual environment.\
-\
-Step 4: To run the program, type the command: \
-	\
-	mpirun -np 4 python3 wayne.py\
-          		        /\\\
-	(The int \'914\'92  /\\  is the number of nodes simulated and can be changed to any # of nodes you\'92d prefer)\
-\
-Step 5: The program gives 2 options:\
-	Option 1: Prompts User to input a certain number of points and then estimates pi with that number.\
-	Option 2: Asks the user how many points they would like to estimate pi with, and endlessly iterates different versions of that number of points.\
-\
-Step 6: Halting the Program:\
-	Option 1: Simply close the visualization window and the estimation for pi will print and the program ends.\
-	Option 2: Either close the constantly changing visualization window, or press ctrl + z to stop the program and then close the remaining window.\
-\
-\
-Please enjoy! Let me know if you have any questions ;)}
+Step 1: Open Mac Terminal and Create a virtual environment with the command: 
+	python3 -m venv venv
+	source venv/bin/activate
+
+Step 2: Install the following inside the virtual environment: 
+	1. mpi4py
+	2. MPICH
+	3. python3 
+	4. matplotlib 
+
+Step 3: Place following Monte Carlo program files into source files whilst in virtual environment:
+	1. run_pi.py
+	2. mpi_utils.py
+	3. visualizer.py
+
+Step 4: To run the program, type the command: 
+	
+	mpirun -np 4 python3 run_pi.py
+          	   /\
+	(The int is /\ the number of nodes simulated and can be changed to any # of nodes you'd prefer)
+
+Step 5: The program gives 2 options:
+	Option 1: Prompts User to input a certain number of points and then estimates pi with that number.
+	Option 2: Asks the user how many points they would like to estimate pi with, and endlessly iterates 
+			  different versions of that number of points.
+
+Step 6: Halting the Program:
+	Option 1: Simply close the visualization window and the estimation for pi will print and the program ends.
+	Option 2: Either close the constantly changing visualization window, or press ctrl + z to stop the 
+			  program and then close the remaining window.
+
+Please enjoy! Let me know if you have any questions ;)
+
+P.S. If you wish to run the program as 1 singular file rather than 3 separate files you can utilize 
+the enigma.py program. This is only in emergencies as the previous 3 files are more secure and less
+prone to crashing.
